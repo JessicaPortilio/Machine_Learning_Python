@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+  form {
+   
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    
+  }
+  input {
+  width: 100%;
+  
+  }
+ 
+</style>
+<body>
+
+  <div class="jumbotron text-center">
+    <h1>Como está o meu coração?</h1><br>
+
+    <img width="985px" , height="200px" , src="https://i.pinimg.com/originals/f7/b9/21/f7b921180ec2e620188eccbc93a9c74b.gif" alt="alternatetext">
+  </div>
+  
+  <div>
+  <form action='/predict' method="POST">
+    Age: <input type='text' name='Age'><br>
+    Sex: <input type='text' name='Sex'><br>
+    ChestPainType: <input type='text' name='ChestPainType'><br>
+    RestingBP: <input type='text' name='RestingBP'><br>
+    Cholesterol: <input type='text' name='Cholesterol'><br>
+    FastingBS: <input type='text' name='FastingBS'><br>
+    RestingECG: <input type='text' name='RestingECG'><br>
+    MaxHR <input type='text' name='MaxHR'><br>
+    ExerciseAngina: <input type='text' name='ExerciseAngina'><br>
+    Oldpeak: <input type='text' name='Oldpeak'><br>
+    ST_Slope: <input type='text' name='ST_Slope'><br>
+    Class: {{result}} <br>
+    <input type='submit' value='Predict'>
+  </form>
+</div>
+</body>
